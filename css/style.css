@@ -44,6 +44,13 @@ color:#14ffc0;
 font-weight: 600;
 font-size: large;
 margin-right: 1rem;
+transition: background-color .5s;
+}
+
+.barraNav li a:hover{
+background-color:#14ffc0;
+border-radius: 5px;
+color:#15133C;
 }
 
 h1{
@@ -51,7 +58,37 @@ position: absolute;
 font-size: 3rem;
 line-height: 1.5rem;
 font-family: 'Shadows Into Light', cursive;
-color:#14ffc0;
+color:#14ffc0 ;
+-webkit-animation: scale-up-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+animation: scale-up-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes scale-up-top {
+0% {
+-webkit-transform: scale(0.5);
+transform: scale(0.5);
+-webkit-transform-origin: 50% 0%;
+transform-origin: 50% 0%;
+}
+100% {
+-webkit-transform: scale(1);
+transform: scale(1);
+-webkit-transform-origin: 50% 0%;
+transform-origin: 50% 0%;
+}
+}
+@keyframes scale-up-top {
+0% {
+-webkit-transform: scale(0.5);
+transform: scale(0.5);
+-webkit-transform-origin: 50% 0%;
+transform-origin: 50% 0%;
+}
+100% {
+-webkit-transform: scale(1);
+transform: scale(1);
+-webkit-transform-origin: 50% 0%;
+transform-origin: 50% 0%;
+}
 }
 
 h2{
@@ -60,7 +97,30 @@ font-size: 3rem;
 margin-top: 2rem;
 font-family: 'Shadows Into Light', cursive; 
 color: #14ffc0;
+-webkit-animation: rotate-vert-center 4s cubic-bezier(0.175, 0.885, 0.320, 1.275) infinite both;
+animation: rotate-vert-center 4s cubic-bezier(0.175, 0.885, 0.320, 1.275) infinite both;
 }
+@-webkit-keyframes rotate-vert-center {
+  0% {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+  }
+  100% {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  }
+}
+@keyframes rotate-vert-center {
+  0% {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+  }
+  100% {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  }
+}
+  
 
 .imagen{
 grid-area: imagen; 
@@ -437,7 +497,20 @@ border-radius: 50%;
 animation: kenburns-bottom-right 5s ease-out both;
 }
 
-
+@keyframes kenburns-bottom-right {
+0% {
+-webkit-transform: scale(1) translate(0, 0);
+transform: scale(1) translate(0, 0);
+-webkit-transform-origin: 84% 84%;
+transform-origin: 84% 84%;
+}
+80% {
+-webkit-transform: scale(1.25) translate(20px, 15px);
+transform: scale(1.25) translate(20px, 15px);
+-webkit-transform-origin: right bottom;
+transform-origin: right bottom;
+} 
+}
 h3{
 font-family:'Shadows Into Light', cursive;
 color:#14ffc0;
