@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
 /* se usa para resetear*/
 *{
 margin: 0;    
@@ -24,6 +24,18 @@ grid-template-areas:
 background-color: #15133C;
 }
 
+.collapse{
+  display: flex;
+  justify-content: end;
+}
+
+.bg{
+  padding: 1rem;
+  background-color: #15133C;
+}
+
+
+/*
 header{
 grid-area: header;
 padding: 3rem .5rem 3rem .5rem;
@@ -34,30 +46,40 @@ height: 100%;
 .barraNav{
 display: flex;
 justify-content:flex-end;
-list-style: none;/*saca los puntos de los items*/
+list-style: none;
+padding: 0;
 }
-
-.barraNav li a{
+*/
+ .nav-link {
 text-decoration: none;
 padding: 1rem 1rem 1rem 1rem;
 color:#14ffc0;
 font-weight: 600;
 font-size: large;
-margin-right: 1rem;
 transition: background-color .5s;
 }
 
-.barraNav li a:hover{
+.navbar-light .navbar-nav .nav-link {
+  color:#14ffc0;
+  padding: 1rem; 
+}
+.nav-item a:hover{
 background-color:#14ffc0;
 border-radius: 5px;
 color:#15133C;
+}/*
+.navbar-toggler{
+  position: absolute;
+  right: 0.5rem;
+  top: 1.3rem;
 }
+*/
 
 h1{
 position: absolute;
-font-size: 3rem;
-line-height: 1.5rem;
-font-family: 'Shadows Into Light', cursive;
+font-size: 2.5rem;
+line-height: .5rem;
+font-family:'Josefin Sans', sans-serif; 
 color:#14ffc0 ;
 -webkit-animation: scale-up-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 animation: scale-up-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -94,9 +116,10 @@ transform-origin: 50% 0%;
 h2{
 text-align: center;
 font-size: 3rem;
-margin-top: 2rem;
+margin-top: 4rem;
 font-family: 'Shadows Into Light', cursive; 
-color: #14ffc0;
+color: #14ffc0;}
+.siguenos{
 -webkit-animation: rotate-vert-center 4s cubic-bezier(0.175, 0.885, 0.320, 1.275) infinite both;
 animation: rotate-vert-center 4s cubic-bezier(0.175, 0.885, 0.320, 1.275) infinite both;
 }
@@ -127,7 +150,7 @@ grid-area: imagen;
 }
 
 img{
-background-image: url(../images/perros.jpg);
+background-image: url(../images/perros1500.jpg);
 max-width:100%;
 margin-top:0px;
 }
@@ -165,12 +188,12 @@ grid-area: footer;
 background: linear-gradient(180deg,#15133C,transparent);
 padding: 3rem;
 text-align: center;
-text-decoration: overline;
 color:#14ffc0;
 }
 
 .textoFooter{
 color: #14ffc0;
+text-decoration: overline;
 }
 
                     /*media queries 1024*/
@@ -189,13 +212,33 @@ background:#15133C;
 }
 header{
 grid-area: header;
-padding: 3rem .5rem 1rem .5rem;
 width: 100%;
 height: 100%;
 background:#15133C;
 position: relative;;
 }
 
+.navbar-toggler{
+  background-color: #F1EEE9;
+}
+
+.navbar-toggler-icon{
+  background-color: #F1EEE9;
+}
+
+.collapse{
+  text-align: right;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+  color:#14ffc0;
+  border: 1px solid;
+  border-radius: 5px;
+  padding-right: 1rem;
+  margin-top: .5rem;
+}
+/*
 .barraNav{
 display: block;
 text-align: center;
@@ -214,13 +257,12 @@ border-radius: 5px;
 display: block;
 padding:.5rem;
 }
-
+*/
 h1{
 position: relative;
 left:0;
 top: 0;
 text-align:center;
-padding-bottom: 1rem;
 }
 }
 
@@ -241,12 +283,16 @@ background:#15133C;
     
 header{
 grid-area: header;
-padding: 3rem .5rem 1rem .5rem;
 width: 100%;
 height: 100%;
 background:linear-gradient(43deg, #307574, transparent);
 position: relative;
 }
+.collapse{
+  text-align: right;
+}
+
+/*
 .barraNav{
 display: block;
 text-align: center;
@@ -260,7 +306,7 @@ font-size: large;
 background:linear-gradient(180deg, black, transparent);
 margin-top: 1rem;
 }
-
+*/
 .multimedia iframe {
 width: 500px;
 height: 350px;
@@ -284,13 +330,25 @@ background:#15133C;
         
 header{
 grid-area: header;
-padding: 3rem .5rem 1rem .5rem;
 width: 100%;
 height: 100%;
 background:linear-gradient(43deg, #307574, transparent);
 position: relative;
 }
 
+.collapse{
+  display: flex;
+  justify-content: start;
+  text-align: left;
+}
+
+h1{
+  position: relative;
+  top: 50%;
+  padding-bottom: 1rem;
+  font-size: 30px;
+}
+/*
 .barraNav{
 display: block;
 text-align: center;
@@ -308,7 +366,7 @@ margin-top: 1rem;
 .barraNav li a {
 color: black;
 }
-
+*/
 .multimedia iframe {
 width: 300px;
 height: 200px;
@@ -352,16 +410,25 @@ box-shadow:18px 55px 83px #f1eee9; /*estetica a borde y sombreado*/
 max-width: 100%;
 opacity: 50%;
 }
+.imgQuienes img{
+  position: absolute;
+  width: 100%;
+}
 .textoQuienes{
 margin-top: 4rem;
 text-align: center;
 line-height: 21px;
 color: #F1EEE9;
+padding:20px;
 }
+
 .quienesTitulo{
 text-align: center;
 }
-    
+
+.carousel-inner{
+padding:10%;
+}
 .quienesFooter{
 color:#14ffc0;
 
@@ -421,7 +488,6 @@ grid-template-areas:
 
 header{
 grid-area: header;
-padding: 3rem .5rem 1rem .5rem;
 width: 100%;
 height: 100%;
 background:linear-gradient(43deg, #307574, transparent);
@@ -483,6 +549,17 @@ text-align: center;
     
     
                        /*comienzo de index.ayudanos*/
+
+ .accordion{
+  padding:0 17%;
+ }                      
+.accordion-button{
+  font-size: 1.5rem;
+}
+
+.accordion-body{
+  text-align: justify;
+}
 .colaboracion{
 display: flex;
 margin: 2rem;
@@ -578,6 +655,18 @@ padding-top:.5rem;
 
                          /* Inicio de main index.adopta*/
 
+.boton{
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.btn-primary{
+  background-color: transparent;
+  border: 1px solid white;
+}
+
 .adopciones{
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
@@ -596,6 +685,7 @@ border-radius: 5%;
 
 .caja img{
 border-radius: 5%;
+width: 100%;
 }
 
 .descripcion{
@@ -603,6 +693,7 @@ text-align: inherit;
 padding: .5rem;
 color: #F1EEE9;
 }
+
 
 @media (max-width:1024px) {
 .adopciones{
@@ -642,12 +733,25 @@ margin: 1rem;
 .contactoGeneral{
 background:#15133C;
 }
+  /* formulario con bootstrap*/
+.row{
+  display: block;
+  padding:.5rem;
+}
 
+.form-control{
+background-color: transparent;
+border: 1px solid black;
+}
 
 .contForm{
 background-image: url(../images/amigos.jpg);
 background-repeat: no-repeat;
 background-size: cover;
+}
+
+.contForm form{
+background-color: rgba(256,256,256,0.2);
 }
 
 .formulario{
