@@ -30,26 +30,10 @@ background-color: #15133C;
 }
 
 .bg{
-  padding: 1rem;
+  padding: 2rem;
   background-color: #15133C;
 }
 
-
-/*
-header{
-grid-area: header;
-padding: 3rem .5rem 3rem .5rem;
-width: 100%;
-height: 100%;
-}
-
-.barraNav{
-display: flex;
-justify-content:flex-end;
-list-style: none;
-padding: 0;
-}
-*/
  .nav-link {
 text-decoration: none;
 padding: 1rem 1rem 1rem 1rem;
@@ -63,17 +47,12 @@ transition: background-color .5s;
   color:#14ffc0;
   padding: 1rem; 
 }
+
 .nav-item a:hover{
 background-color:#14ffc0;
 border-radius: 5px;
 color:#15133C;
-}/*
-.navbar-toggler{
-  position: absolute;
-  right: 0.5rem;
-  top: 1.3rem;
 }
-*/
 
 h1{
 position: absolute;
@@ -119,6 +98,7 @@ font-size: 3rem;
 margin-top: 4rem;
 font-family: 'Shadows Into Light', cursive; 
 color: #14ffc0;}
+
 .siguenos{
 -webkit-animation: rotate-vert-center 4s cubic-bezier(0.175, 0.885, 0.320, 1.275) infinite both;
 animation: rotate-vert-center 4s cubic-bezier(0.175, 0.885, 0.320, 1.275) infinite both;
@@ -191,7 +171,7 @@ text-align: center;
 color:#14ffc0;
 }
 
-.textoFooter{
+footer p{
 color: #14ffc0;
 text-decoration: overline;
 }
@@ -238,26 +218,7 @@ position: relative;;
   padding-right: 1rem;
   margin-top: .5rem;
 }
-/*
-.barraNav{
-display: block;
-text-align: center;
-}
 
-.barraNav li {
-color: white;
-font-weight: 600;
-font-size: large;
-border: 1px solid white;
-margin-top: 1rem;
-border-radius: 5px;
-}
-
-.barraNav li a{
-display: block;
-padding:.5rem;
-}
-*/
 h1{
 position: relative;
 left:0;
@@ -266,7 +227,7 @@ text-align:center;
 }
 }
 
-                /*media queries d 768px*/
+                /*media queries de 768px*/
 @media (max-width:768px) {
 .general{
 display: grid;
@@ -292,21 +253,6 @@ position: relative;
   text-align: right;
 }
 
-/*
-.barraNav{
-display: block;
-text-align: center;
-padding-top: 1rem;
-}
-    
-.barraNav li {
-color: white;
-font-weight: 600;
-font-size: large;
-background:linear-gradient(180deg, black, transparent);
-margin-top: 1rem;
-}
-*/
 .multimedia iframe {
 width: 500px;
 height: 350px;
@@ -348,25 +294,10 @@ h1{
   padding-bottom: 1rem;
   font-size: 30px;
 }
-/*
-.barraNav{
-display: block;
-text-align: center;
-padding-top: 1rem;
-}
-        
-.barraNav li {
-color: white;
-font-weight: 600;
-font-size: large;
-background: gainsboro;
-margin-top: 1rem;
-}
 
-.barraNav li a {
-color: black;
+h2{
+  font-size: 30px;
 }
-*/
 .multimedia iframe {
 width: 300px;
 height: 200px;
