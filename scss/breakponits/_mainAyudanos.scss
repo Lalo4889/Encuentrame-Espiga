@@ -1,0 +1,115 @@
+/*inicio de index ayudanos*/
+
+.colaboracion{
+    display: flex;
+    margin: 2rem;
+    background:linear-gradient(85deg,#73777B,transparent);
+    padding: 2rem;
+    border-radius:2%;
+        
+        & img{
+        background-image:url(../images/abrazo.jpg);
+        border-radius: 50%;
+        -webkit-animation: kenburns-bottom-right 5s ease-out both;
+        animation: kenburns-bottom-right 5s ease-out both;
+        }
+    
+        @keyframes kenburns-bottom-right {
+        0% {
+        -webkit-transform: scale(1) translate(0, 0);
+        transform: scale(1) translate(0, 0);
+        -webkit-transform-origin: 84% 84%;
+        transform-origin: 84% 84%;
+        }
+        80% {
+        -webkit-transform: scale(1.25) translate(20px, 15px);
+        transform: scale(1.25) translate(20px, 15px);
+        -webkit-transform-origin: right bottom;
+        transform-origin: right bottom;
+        } 
+        }
+        .textoAyudanos{
+        color:$color-texto;
+        text-align: center;
+        padding: 1rem 1rem;
+        font-size: large;
+        margin: auto;
+        }
+    }
+
+   
+  h3{
+    font-family:$fuenteSecundaria;
+    color:$colorTitulos;
+    font-size:2rem;
+    text-align: center;
+    padding-top: 2rem;
+    }
+
+    
+  h4{
+    color:$color-texto;
+    font-size: 1rem;
+    text-align: center;
+    font-family: $fueneteTexto;
+    } 
+    
+     
+ .accordion{
+    padding:0 17%;
+    & button{
+        font-size: 1.5rem;
+      }
+   }                      
+  
+  .accordion-body{
+    text-align: justify;
+  }
+  
+  .materiales{
+  color: $color-texto;
+  padding: .5rem 1rem;
+  }
+  
+  .mapa{
+  max-width: 100%;
+  @include ubicacion;
+  padding: 5rem  .5rem;
+  }
+
+
+  /*index ayudanos 1024px*/
+
+  @media (max-width:1024px) {
+    .colaboracion img{
+    background-image:url(../images/abrazo.jpg);
+    border-radius: 40%;
+    }
+    
+    .colaboracion{
+    display: flex;
+    flex-direction: column;
+    }
+    }
+    
+/* index ayudanos 768px*/
+
+    @media (max-width:768px) {       
+    .colaboracion{
+    display: flex;
+    flex-direction: column-reverse;
+    display: flex;
+    margin: auto;
+    background:linear-gradient(85deg,#73777B,transparent);
+    padding: 2rem;   
+    } 
+    }
+    
+/*index ayudanos 480px*/
+
+    @media (max-width:480px) {
+    .colaboracion{
+    padding-top:.5rem;
+    } 
+    }
+    

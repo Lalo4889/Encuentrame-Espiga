@@ -1,0 +1,9 @@
+@mixin tamaño ($width, $heigth) {
+    width: $width;  
+    height: $heigth;
+  }
+  
+  @mixin ubicacion {
+    display: flex;
+    justify-content: center;
+  }

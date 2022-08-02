@@ -1,0 +1,158 @@
+/* inicio de main preinipal*/
+
+.texto{
+    padding: 10px;
+    line-height: 25px;
+    margin: 3rem 0;
+    font-size: larger;
+    text-align: center; 
+    color:$color-texto;
+    }
+  
+  img{
+  background-image: url(../images/perros1500.jpg);
+  max-width:100%;
+  margin-top:0px;
+  }
+  
+  .multimedia{
+  grid-area: multimedia;
+  display: flex;
+  justify-content: space-around;
+  & iframe {
+    max-width: 100%;
+}
+ }
+  
+
+/*inicio media queryes de 1024px*/
+
+@media (max-width:1024px) {
+    .general{
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-areas: 
+    "header"
+    "imagen"
+    "texto"
+    "multimedia"
+    "redes"
+    "footer";
+    }
+    header{
+    grid-area: header;
+    @include tamaño(100%, 100%);
+    background:$colorPrincpal;
+    position: relative;;
+    }
+    
+    .navbar-toggler{
+      background-color:$color-texto;
+      & icon{
+        background-color:$color-texto;
+      }
+    }
+    
+    .collapse{
+      text-align: right;
+    }
+    
+    .navbar-light .navbar-nav .nav-link {
+      color:$colorTitulos;
+      border: 1px solid;
+      border-radius: 5px;
+      padding-right: 1rem;
+      margin-top: .5rem;
+    }
+    
+    h1{
+    position: relative;
+    left:0;
+    top: 0;
+    text-align:center;
+    }
+    }
+
+/*inicio de media queryes de 768px*/
+
+@media (max-width:768px) {
+    .general{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "imagen"
+        "texto"
+        "multimedia"
+        "redes"
+        "footer";         
+        }
+         
+        header{
+        grid-area: header;
+        @include tamaño(100%, 100%);
+        background:linear-gradient(43deg, #307574, transparent);
+        position: relative;
+        }
+        .collapse{
+          text-align: right;
+        }
+        
+        .multimedia iframe {
+        @include tamaño(500px, 350px);
+        }
+        }
+
+/*inicio de media queryes de 480px*/
+
+@media (max-width:480px) {
+    .general{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "imagen"
+    "texto"
+    "multimedia"
+    "redes"
+    "footer";          
+    }
+            
+    header{
+    grid-area: header;
+    @include tamaño(100%, 100%);
+    background:linear-gradient(43deg, #307574, transparent);
+    position: relative;
+    }
+    
+    .collapse{
+      @include ubicacion;
+      text-align:center;
+    }
+    
+    h1{
+      position: relative;
+      top: 50%;
+      padding-bottom: 1rem;
+      font-size: 30px;
+    }
+    
+    h2{
+      font-size: 30px;
+    }
+    .multimedia iframe {
+        @include tamaño(300px, 200px);
+    }
+    
+    .redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    }
+    
+    .logos{ 
+    padding-bottom: 1rem;
+    }
+    }

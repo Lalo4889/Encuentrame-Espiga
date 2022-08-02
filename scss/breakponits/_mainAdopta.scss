@@ -1,0 +1,72 @@
+/*comienzo de index adopta*/
+.adopciones{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:33% 33% 33% auto;
+    gap: 2rem;
+    margin: 3rem 6rem 3rem 6rem;
+    
+        .caja{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5rem;
+            backdrop-filter: contrast(0.7);
+            border-radius: 5%;
+     
+               & img{
+                 border-radius: 5%;
+                 @include tamaño(100%, none);
+       }
+    }
+   .descripcion{
+    text-align: inherit;
+    padding: .5rem;
+    color: $color-texto;
+    }    
+}   
+
+.boton{
+    padding-top: 2rem;
+    @include ubicacion;
+       
+      .btn-primary{
+        background-color: transparent;
+        border: 1px solid white;
+  }
+}
+  
+  
+  /* index adopta 1024px */
+
+  @media (max-width:1024px) {
+    .adopciones{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    gap: 2rem;
+    margin: 2rem;
+    }     
+    }
+
+/* index adopta 768px*/
+    @media (max-width:768px) {
+        .adopciones{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        gap: 2rem;
+        margin: 2rem;
+        }   
+        }
+
+/*index adopta 480px*/        
+        @media (max-width:480px) {
+        .adopciones{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10%;
+        gap: 1rem;
+        margin: 1rem;
+        }  
+        }
+  
