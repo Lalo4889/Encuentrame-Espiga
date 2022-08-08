@@ -1,5 +1,6 @@
 /* inicio de main preinipal*/
 
+
 .texto{
     padding: 10px;
     line-height: 25px;
@@ -7,6 +8,19 @@
     font-size: larger;
     text-align: center; 
     color:$color-texto;
+    b{
+      color: $colorTitulos;
+    }
+    .pregunta{
+      font-size: 2rem;
+      font-style: oblique;
+      font-weight: 200;
+      color: aquamarine;
+      margin: 3rem auto;
+    }
+    .razones{
+     @extend .pregunta 
+    }    
     }
   
   img{
@@ -23,6 +37,7 @@
     max-width: 100%;
 }
  }
+
   
 
 /*inicio media queryes de 1024px*/

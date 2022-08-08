@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
@@ -9,7 +8,7 @@
 }
 
 body {
-  background-color: #15133C;
+  background: linear-gradient(341deg, rgba(37, 84, 185, 0.7882352941), transparent);
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -73,7 +72,11 @@ h1 {
   color: #15133C;
 }
 
-h2, h4 {
+header {
+  border-bottom: 0.5px solid whitesmoke;
+}
+
+h2 {
   text-align: center;
   font-size: 3rem;
   margin-top: 4rem;
@@ -103,18 +106,23 @@ h2, h4 {
   }
 }
 .redes {
+  background-color: #15133C;
   display: flex;
   justify-content: space-evenly;
   margin-top: 4rem;
   margin-bottom: 5rem;
-  background-color: #F1EEE9;
+}
+.redes .logos img {
+  background: bottom;
+  margin: auto;
 }
 
 footer {
-  background: linear-gradient(180deg, footer #15133C, transparent);
   padding: 3rem;
   text-align: center;
   color: #14ffc0;
+  border-top: 0.5px solid whitesmoke;
+  background: linear-gradient(341deg, rgba(37, 84, 185, 0.7882352941), transparent);
 }
 footer ul {
   color: #14ffc0;
@@ -152,7 +160,16 @@ footer p {
   text-align: center;
   color: #F1EEE9;
 }
-
+.texto b {
+  color: #14ffc0;
+}
+.texto .pregunta, .texto .razones {
+  font-size: 2rem;
+  font-style: oblique;
+  font-weight: 200;
+  color: aquamarine;
+  margin: 3rem auto;
+}
 img {
   background-image: url(../images/perros1500.jpg);
   max-width: 100%;
@@ -252,7 +269,7 @@ img {
     padding-bottom: 1rem;
     font-size: 30px;
   }
-  h2, h4 {
+  h2 {
     font-size: 30px;
   }
   .multimedia iframe {
@@ -270,7 +287,7 @@ img {
     padding-bottom: 1rem;
   }
 }
-/* index quienes */
+/*  quienes */
 body {
   background: #15133C;
 }
@@ -284,34 +301,23 @@ body .quienesTitulo {
 body .contenedorQuienes {
   width: 90%;
   height: none;
-  overflow: hidden;
-  position: relative;
   margin: 100px auto;
   border-radius: 20px;
   box-shadow: 18px 55px 83px #F1EEE9; /*estetica a borde y sombreado*/
 }
-body .contenedorQuienes .imgQuienes {
-  max-width: 100%;
-  opacity: 50%;
-}
-body .contenedorQuienes .imgQuienes img {
-  position: absolute;
-  width: 100%;
-}
-body .contenedorQuienes .textoQuienes {
+body .textoQuienes {
   margin-top: 4rem;
   text-align: center;
-  line-height: 21px;
   color: #F1EEE9;
   padding: 20px;
-}
-
-h4 {
-  font-size: 25px;
+  line-height: 2rem;
+  background: repeating-linear-gradient(45deg, black, transparent 100px);
+  border-radius: 20px;
+  font-size: larger;
 }
 
 .carousel-inner {
-  padding: 10%;
+  padding: 5rem 12%;
 }
 
 /* index quienes somos x 1024px*/
@@ -328,21 +334,13 @@ h4 {
     grid-area: contenedorquienes;
     width: 90%;
     height: none;
-    overflow: hidden;
-    position: relative;
     margin: 2rem auto;
     border-radius: 20px;
     box-shadow: 18px 55px 83px #f1eee9; /*estetica a borde y sombreado*/
   }
-  .contenedorQuienes .imgQuienes {
-    max-width: 100%;
-    opacity: 50%;
-  }
   .contenedorQuienes .textoQuienes {
     margin-top: auto;
-    position: relative;
     text-align: center;
-    line-height: 21px;
     color: #F1EEE9;
     font-size: 15px;
   }
@@ -425,10 +423,11 @@ h4 {
   width: 100%;
   height: none;
 }
-.adopciones .descripcion {
+.adopciones .descripcion, .adopciones .offcanvas p, .offcanvas .adopciones p {
   text-align: inherit;
   padding: 0.5rem;
   color: #F1EEE9;
+  font-family: "Work Sans", sans-serif;
 }
 
 .boton {
@@ -441,6 +440,10 @@ h4 {
   border: 1px solid white;
 }
 
+.offcanvas {
+  background: black;
+  color: aquamarine;
+}
 /* index adopta 1024px */
 @media (max-width: 1024px) {
   .adopciones {
@@ -579,7 +582,7 @@ h4 {
     padding-top: 0.5rem;
   }
 }
-/*inicio index contacto*/
+/*inicio  contacto*/
 .contactoGeneral {
   background: #15133C;
 }
@@ -599,46 +602,4 @@ h4 {
 .row {
   display: block;
   padding: 0.5rem;
-}
-
-/* diseño de formulario sin botstrap
-
-.formulario{
-height: 80vh;
-margin: auto 13rem auto 2rem;
-padding: 5rem;
-line-height: 2rem;
-font-size: 20px;
-}  
-
-.diseñoForm{
-display: flex;
-flex-direction: column;
-padding-top: 2rem;
-}
-
-.datos{
-height: 2rem;
-width: 16rem;
-border-radius: 5px; 
-opacity:20%; 
-cursor: pointer;
-}
-
-.info{
-display: flex;
-flex-direction: column;
-padding-top: 2rem;
-height: 62px;
-}
-
-.infoDato{
-    width: 16rem;
-    border-radius: 5px;
-    opacity: 80%;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    background: transparent;
-    font-weight: bold;
-    cursor: pointer;
-}*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

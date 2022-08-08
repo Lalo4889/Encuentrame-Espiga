@@ -1,4 +1,4 @@
-/* index quienes */
+/*  quienes */
 body{
     background:$colorPrincpal;
     .quienesGeneral{
@@ -11,37 +11,26 @@ body{
         
     .contenedorQuienes{
         @include tamaño(90%, none);
-        overflow: hidden;
-        position: relative;
         margin: 100px auto;
         border-radius: 20px;
         box-shadow:18px 55px 83px $color-texto; /*estetica a borde y sombreado*/
           
-              .imgQuienes{
-                  max-width: 100%;
-                  opacity: 50%;
-
-                          & img{
-                            position: absolute;
-                            width: 100%;
-                      }
+             
           }
               .textoQuienes{
                   margin-top: 4rem;
                   text-align: center;
-                  line-height: 21px;
                   color:$color-texto;
                   padding:20px;
+                  line-height: 2rem;
+                  background: repeating-linear-gradient(45deg, black, transparent 100px);
+                  border-radius: 20px;
+                  font-size: larger;
                     }
                   } 
-                }
-    h4{
-        font-size:25px;
-        @extend h2
-      
-    }
+                
     .carousel-inner{
-    padding:10%;
+    padding: 5rem 12%;
     }
 
     /* index quienes somos x 1024px*/
@@ -64,23 +53,16 @@ body{
     .contenedorQuienes{
     grid-area: contenedorquienes;
     @include tamaño(90%, none);
-    overflow: hidden;
-    position: relative;
     margin: 2rem auto;
     border-radius: 20px;
     box-shadow:18px 55px 83px #f1eee9; /*estetica a borde y sombreado*/
-        .imgQuienes{
-            max-width: 100%;
-            opacity: 50%;
-            }
              
     .textoQuienes{
         margin-top: auto;
-        position: relative;
         text-align: center;
-        line-height: 21px;
         color: $color-texto;
-        font-size: 15px;
+        font-size: 15px; 
+       
         }
       }
     }

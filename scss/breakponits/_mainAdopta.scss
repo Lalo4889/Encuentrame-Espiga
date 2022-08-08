@@ -22,6 +22,7 @@
     text-align: inherit;
     padding: .5rem;
     color: $color-texto;
+    font-family: $fueneteTexto;
     }    
 }   
 
@@ -32,9 +33,16 @@
       .btn-primary{
         background-color: transparent;
         border: 1px solid white;
-  }
+  }   
 }
-  
+.offcanvas {
+  background: black;
+  color: aquamarine;
+  p{
+    @extend .descripcion
+  } 
+}
+
   
   /* index adopta 1024px */
 
