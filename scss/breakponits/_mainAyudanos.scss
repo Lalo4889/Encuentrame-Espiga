@@ -1,4 +1,4 @@
-/*inicio de index ayudanos*/
+/*inicio de ayudanos*/
 
 .colaboracion{
     display: flex;
@@ -61,7 +61,9 @@
         font-size: 1.5rem;
       }
    }                      
-  
+   .collapse{
+    display: flex;
+  }
   .accordion-body{
     text-align: justify;
   }
@@ -78,7 +80,7 @@
   }
 
 
-  /*index ayudanos 1024px*/
+  /* ayudanos 1024px*/
 
   @media (max-width:1024px) {
     .colaboracion img{
@@ -92,7 +94,7 @@
     }
     }
     
-/* index ayudanos 768px*/
+/* ayudanos 768px*/
 
     @media (max-width:768px) {       
     .colaboracion{
@@ -105,7 +107,7 @@
     } 
     }
     
-/*index ayudanos 480px*/
+/*ayudanos 480px*/
 
     @media (max-width:480px) {
     .colaboracion{

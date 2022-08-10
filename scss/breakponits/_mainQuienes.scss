@@ -1,73 +1,86 @@
 /*  quienes */
+
 body{
     background:$colorPrincpal;
     .quienesGeneral{
         @include tamaño(100%, none);
     }
-    
-    .quienesTitulo{
-        text-align: center;
-        }
-        
-    .contenedorQuienes{
-        @include tamaño(90%, none);
-        margin: 100px auto;
-        border-radius: 20px;
-        box-shadow:18px 55px 83px $color-texto; /*estetica a borde y sombreado*/
-          
-             
-          }
-              .textoQuienes{
-                  margin-top: 4rem;
-                  text-align: center;
-                  color:$color-texto;
-                  padding:20px;
-                  line-height: 2rem;
-                  background: repeating-linear-gradient(45deg, black, transparent 100px);
-                  border-radius: 20px;
-                  font-size: larger;
-                    }
-                  } 
-                
-    .carousel-inner{
-    padding: 5rem 12%;
+}
+    .team{
+      width: 100%;
     }
 
-    /* index quienes somos x 1024px*/
+    .nosotros img{
+        float: left;
+        padding: 2rem;
+      }
+
+    .manos{
+        background: transparent;
+        width: 50%;
+        height: 50%;
+      }
+
+    .textoQuienes{
+      margin:1rem 1rem;
+      text-align: initial;
+      line-height: 2.5rem;
+      color:$color-texto;
+      font-size: larger;
+      font-family: $fueneteTexto;
+      padding-top: 2rem;
+        }
+          
+    .veterinario{
+        width: 100%;
+        padding-top: 2rem;
+        background: transparent;
+      }         
+
+    .textoVeterinario{
+        & b{
+            color: aquamarine;
+        }
+      text-align: center;
+      @extend .textoQuienes
+    }
+
+                         
+    h4{
+        font-size:25px;
+        @extend h2
+      
+    }
+    .carousel-inner{
+    padding:10%;
+    }
+
+    /* quienes somos x 1024px*/
 
 @media (max-width:1024px) {
-    .quienesGeneral{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "header"
-    "h2"
-    "contenedorQuienes"
-    "redes"
-    "footer";
-    }
-    
     .quienesTitulo{
         text-align: center;
         }
-    .contenedorQuienes{
-    grid-area: contenedorquienes;
-    @include tamaño(90%, none);
-    margin: 2rem auto;
-    border-radius: 20px;
-    box-shadow:18px 55px 83px #f1eee9; /*estetica a borde y sombreado*/
              
     .textoQuienes{
-        margin-top: auto;
-        text-align: center;
-        color: $color-texto;
-        font-size: 15px; 
-       
+      margin:1rem 1rem;
+      text-align: initial;
+      line-height: 2.5rem;
+      color:$color-texto;
+      font-size: larger;
+      font-family: $fueneteTexto;
+      padding-top: 2rem;
+        }
+        .nosotros img{
+          float: left;
+          padding: 2rem;
+          padding-bottom:0;
         }
       }
-    }
-
     
+
+    /*quienes somos x 768px*/
+
 @media (max-width:768px) {
     .quienesGeneral{
     @include tamaño(100%, none);
@@ -87,54 +100,31 @@ body{
     background:linear-gradient(43deg, #307574, transparent);
     position: relative;
     }
-    
+    .manos{
+      background: transparent;
+      width: 70%;
+      height: 70%;
+    }
+
     .h2{
     grid-area: h2;
     text-align: center;
     }
-
-    .contenedorQuienes{
-    grid-area: contenedorQuienes;
-        
-    .imgQuienes{
-        @include tamaño(100%, none);
-        opacity: 50%;
-        }   
-      }
     }
     
+    /*quienes somos x 480px*/
+
     @media (max-width:480px) {
-    .quienesGeneral{
-    @include tamaño(100%, none);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "header"
-    "h2"
-    "contenedorQuienes"
-    "redes"
-    "footer";
-    }   
-    
-    .quienesTitulo{
-        text-align: center;
-        }
-
-    .contenedorQuienes{
-    grid-area: contenedorQuienes;
-    margin: 1rem auto;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-        .imgQuienes{
-            max-width: 100%; 
-            }
-
-    .textoQuienes{
-    @include tamaño(100%, none);
-    text-align: center;
-    line-height: 21px;
-    color:$color-texto;
-       }
-     }   
+    .team{
+      width: 100%;
     }
+    .manos{
+      width: 100%;
+    }
+    .textoQuienes{
+        text-align: center;
+    }
+     }   
+    
+
+

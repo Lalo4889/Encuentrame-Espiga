@@ -76,7 +76,7 @@ header {
   border-bottom: 0.5px solid whitesmoke;
 }
 
-h2 {
+h2, h4 {
   text-align: center;
   font-size: 3rem;
   margin-top: 4rem;
@@ -269,7 +269,7 @@ img {
     padding-bottom: 1rem;
     font-size: 30px;
   }
-  h2 {
+  h2, h4 {
     font-size: 30px;
   }
   .multimedia iframe {
@@ -295,56 +295,74 @@ body .quienesGeneral {
   width: 100%;
   height: none;
 }
-body .quienesTitulo {
-  text-align: center;
+
+.team {
+  width: 100%;
 }
-body .contenedorQuienes {
-  width: 90%;
-  height: none;
-  margin: 100px auto;
-  border-radius: 20px;
-  box-shadow: 18px 55px 83px #F1EEE9; /*estetica a borde y sombreado*/
+
+.nosotros img {
+  float: left;
+  padding: 2rem;
 }
-body .textoQuienes {
-  margin-top: 4rem;
-  text-align: center;
+
+.manos {
+  background: transparent;
+  width: 50%;
+  height: 50%;
+}
+
+.textoQuienes, .textoVeterinario {
+  margin: 1rem 1rem;
+  text-align: initial;
+  line-height: 2.5rem;
   color: #F1EEE9;
-  padding: 20px;
-  line-height: 2rem;
-  background: repeating-linear-gradient(45deg, black, transparent 100px);
-  border-radius: 20px;
   font-size: larger;
+  font-family: "Work Sans", sans-serif;
+  padding-top: 2rem;
+}
+
+.veterinario {
+  width: 100%;
+  padding-top: 2rem;
+  background: transparent;
+}
+
+.textoVeterinario {
+  text-align: center;
+}
+.textoVeterinario b {
+  color: aquamarine;
+}
+
+h4 {
+  font-size: 25px;
 }
 
 .carousel-inner {
-  padding: 5rem 12%;
+  padding: 10%;
 }
 
-/* index quienes somos x 1024px*/
+/* quienes somos x 1024px*/
 @media (max-width: 1024px) {
-  .quienesGeneral {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "h2" "contenedorQuienes" "redes" "footer";
-  }
   .quienesTitulo {
     text-align: center;
   }
-  .contenedorQuienes {
-    grid-area: contenedorquienes;
-    width: 90%;
-    height: none;
-    margin: 2rem auto;
-    border-radius: 20px;
-    box-shadow: 18px 55px 83px #f1eee9; /*estetica a borde y sombreado*/
-  }
-  .contenedorQuienes .textoQuienes {
-    margin-top: auto;
-    text-align: center;
+  .textoQuienes, .textoVeterinario {
+    margin: 1rem 1rem;
+    text-align: initial;
+    line-height: 2.5rem;
     color: #F1EEE9;
-    font-size: 15px;
+    font-size: larger;
+    font-family: "Work Sans", sans-serif;
+    padding-top: 2rem;
+  }
+  .nosotros img {
+    float: left;
+    padding: 2rem;
+    padding-bottom: 0;
   }
 }
+/*quienes somos x 768px*/
 @media (max-width: 768px) {
   .quienesGeneral {
     width: 100%;
@@ -360,49 +378,29 @@ body .textoQuienes {
     background: linear-gradient(43deg, #307574, transparent);
     position: relative;
   }
+  .manos {
+    background: transparent;
+    width: 70%;
+    height: 70%;
+  }
   .h2 {
     grid-area: h2;
     text-align: center;
   }
-  .contenedorQuienes {
-    grid-area: contenedorQuienes;
-  }
-  .contenedorQuienes .imgQuienes {
-    width: 100%;
-    height: none;
-    opacity: 50%;
-  }
 }
+/*quienes somos x 480px*/
 @media (max-width: 480px) {
-  .quienesGeneral {
+  .team {
     width: 100%;
-    height: none;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "h2" "contenedorQuienes" "redes" "footer";
   }
-  .quienesTitulo {
-    text-align: center;
-  }
-  .contenedorQuienes {
-    grid-area: contenedorQuienes;
-    margin: 1rem auto;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  .contenedorQuienes .imgQuienes {
-    max-width: 100%;
-  }
-  .contenedorQuienes .textoQuienes {
+  .manos {
     width: 100%;
-    height: none;
+  }
+  .textoQuienes, .textoVeterinario {
     text-align: center;
-    line-height: 21px;
-    color: #F1EEE9;
   }
 }
-/*comienzo de index adopta*/
+/*comienzo de adopta*/
 .adopciones {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -444,7 +442,7 @@ body .textoQuienes {
   background: black;
   color: aquamarine;
 }
-/* index adopta 1024px */
+/*adopta 1024*/
 @media (max-width: 1024px) {
   .adopciones {
     display: grid;
@@ -454,7 +452,7 @@ body .textoQuienes {
     margin: 2rem;
   }
 }
-/* index adopta 768px*/
+/* adopta 768px*/
 @media (max-width: 768px) {
   .adopciones {
     display: grid;
@@ -464,7 +462,7 @@ body .textoQuienes {
     margin: 2rem;
   }
 }
-/*index adopta 480px*/
+/*adopta 480px*/
 @media (max-width: 480px) {
   .adopciones {
     display: grid;
@@ -474,7 +472,7 @@ body .textoQuienes {
     margin: 1rem;
   }
 }
-/*inicio de index ayudanos*/
+/*inicio de ayudanos*/
 .colaboracion {
   display: flex;
   margin: 2rem;
@@ -538,6 +536,10 @@ h4 {
   font-size: 1.5rem;
 }
 
+.collapse {
+  display: flex;
+}
+
 .accordion-body {
   text-align: justify;
 }
@@ -554,7 +556,7 @@ h4 {
   padding: 5rem 0.5rem;
 }
 
-/*index ayudanos 1024px*/
+/* ayudanos 1024px*/
 @media (max-width: 1024px) {
   .colaboracion img {
     background-image: url(../images/abrazo.jpg);
@@ -565,7 +567,7 @@ h4 {
     flex-direction: column;
   }
 }
-/* index ayudanos 768px*/
+/* ayudanos 768px*/
 @media (max-width: 768px) {
   .colaboracion {
     display: flex;
@@ -576,7 +578,7 @@ h4 {
     padding: 2rem;
   }
 }
-/*index ayudanos 480px*/
+/*ayudanos 480px*/
 @media (max-width: 480px) {
   .colaboracion {
     padding-top: 0.5rem;

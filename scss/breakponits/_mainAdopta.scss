@@ -1,4 +1,4 @@
-/*comienzo de index adopta*/
+/*comienzo de adopta*/
 .adopciones{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -44,7 +44,7 @@
 }
 
   
-  /* index adopta 1024px */
+  /*adopta 1024*/
 
   @media (max-width:1024px) {
     .adopciones{
@@ -56,7 +56,7 @@
     }     
     }
 
-/* index adopta 768px*/
+/* adopta 768px*/
     @media (max-width:768px) {
         .adopciones{
         display: grid;
@@ -67,7 +67,7 @@
         }   
         }
 
-/*index adopta 480px*/        
+/*adopta 480px*/        
         @media (max-width:480px) {
         .adopciones{
         display: grid;
