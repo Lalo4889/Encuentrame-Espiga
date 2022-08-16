@@ -11,43 +11,5 @@ h2{
     color:$colorTitulos;
     }
     
-    .siguenos{
-  -webkit-animation: rotate-vert-center 4s cubic-bezier(0.175, 0.885, 0.320, 1.275) infinite both;
-  animation: rotate-vert-center 4s cubic-bezier(0.175, 0.885, 0.320, 1.275) infinite both;
-  }
-  @-webkit-keyframes rotate-vert-center {
-    0% {
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0);
-    }
-    100% {
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-    }
-  }
-  @keyframes rotate-vert-center {
-    0% {
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0);
-    }
-    100% {
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-    }
-  }
   
- .redes{
-  background-color: $colorPrincpal;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 4rem;
-  margin-bottom: 5rem;
-    & .logos{
-      & img{
-        background:bottom;
-        margin: auto;
-      }
-    }
- }
-
 

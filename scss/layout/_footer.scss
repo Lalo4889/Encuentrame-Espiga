@@ -1,17 +1,21 @@
-footer{
-    padding: 3rem;
+.footerGeneral{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top:5rem;
     text-align: center;
     color:$colorTitulos;
-    border-top: 0.5px solid whitesmoke;
-    background: linear-gradient(341deg, #2554b9c9, transparent);
-    
-  
+    background: linear-gradient(0deg, rgba(37, 84, 185, 0.7882352941), transparent);
+  .barraFooter{
+padding-top: 2rem;
  ul{
     color:$colorTitulos;
        li{
+        list-style-type: none;
+        display: flex;
+        
            a{
             text-decoration: none;
-            padding: 1rem 1rem 1rem 1rem;
+            padding:.5rem;
             color:$colorTitulos;
             font-weight: 600;
             font-size: large;
@@ -19,18 +23,107 @@ footer{
             &:hover{
                 background-color:$colorTitulos;
                 border-radius: 5px; 
+                color: $colorPrincpal;
                 }
            }
         }
     }
-    p{
-        color:$colorTitulos;
-        text-decoration: overline;
-   }
 }
-.nav-link{
+    
+  .infoFooter{
+    padding-top: 8rem;
+    border-left: 1px solid;
+    margin: 1rem 0;
+        img{
+            background: transparent;
+            padding-right: 1rem;
+        }
+
+       p{
+        text-decoration: none;
+       }
+  }
+    
+  .redes{
+    display: flex;
+    justify-content: space-around;
+    padding: 6rem 1rem;
+    border-left: 1px solid;
+    margin: 1rem 0;
+    background: transparent;
+  } 
+  .logos{
+    background: transparent;
+    padding-left: 1rem;
+  }
+
+  .nav-link{
     color: $colorTitulos;
     &:hover{
         color: $colorPrincpal;
     }
+}
+} 
+
+
+  /* footer 768 px*/
+  @media (max-width: 768px) {
+    .footerGeneral{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "barraFooter"
+        "redes"
+        "infoFooter";
+      
+      .barraFooter{
+        grid-area: barraFooter;
+        border-right: none;
+        display: flex;
+        justify-content: space-around;        
+      }
+      .redes{
+        grid-area: redes;
+        display: flex;
+        justify-content: space-around;   
+        padding:2rem;
+        border-left: none;
+      }
+      .infoFooter{
+        grid-area: infoFooter;
+        border-left: none;
+        padding-top:2rem;
+      }
+  }
+}
+  /* footer 480px*/
+
+  @media (max-width: 480px) {
+    .footerGeneral{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "barraFooter"
+        "redes"
+        "infoFooter";
+      
+      .barraFooter{
+        grid-area: barraFooter;
+        border-right: none;
+        display: flex;
+        justify-content: space-around;        
+      }
+      .redes{
+        grid-area: redes;
+        display: flex;
+        flex-direction:row;   
+        padding:0;
+        border-left: none;
+      }
+      .infoFooter{
+        grid-area: infoFooter;
+        padding-top:0;
+        border-left: none;
+      }
+  }
 }

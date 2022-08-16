@@ -11,6 +11,10 @@ body {
   background: linear-gradient(341deg, rgba(37, 84, 185, 0.7882352941), transparent);
 }
 
+.navbar {
+  background: linear-gradient(597deg, #084298, transparent);
+}
+
 .navbar-light .navbar-nav .nav-link {
   color: #14ffc0;
   padding: 1rem;
@@ -84,73 +88,120 @@ h2, h4 {
   color: #14ffc0;
 }
 
-.siguenos {
-  -webkit-animation: rotate-vert-center 4s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite both;
-  animation: rotate-vert-center 4s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite both;
-}
-
-@-webkit-keyframes rotate-vert-center {
-  0% {
-    transform: rotateY(0);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
-}
-@keyframes rotate-vert-center {
-  0% {
-    transform: rotateY(0);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
-}
-.redes {
-  background-color: #15133C;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 4rem;
-  margin-bottom: 5rem;
-}
-.redes .logos img {
-  background: bottom;
-  margin: auto;
-}
-
-footer {
-  padding: 3rem;
+.footerGeneral {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 5rem;
   text-align: center;
   color: #14ffc0;
-  border-top: 0.5px solid whitesmoke;
-  background: linear-gradient(341deg, rgba(37, 84, 185, 0.7882352941), transparent);
+  background: linear-gradient(0deg, rgba(37, 84, 185, 0.7882352941), transparent);
 }
-footer ul {
+.footerGeneral .barraFooter {
+  padding-top: 2rem;
+}
+.footerGeneral .barraFooter ul {
   color: #14ffc0;
 }
-footer ul li a {
+.footerGeneral .barraFooter ul li {
+  list-style-type: none;
+  display: flex;
+}
+.footerGeneral .barraFooter ul li a {
   text-decoration: none;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 0.5rem;
   color: #14ffc0;
   font-weight: 600;
   font-size: large;
   transition: background-color 0.5s;
 }
-footer ul li a:hover {
+.footerGeneral .barraFooter ul li a:hover {
   background-color: #14ffc0;
   border-radius: 5px;
+  color: #15133C;
 }
-footer p {
+.footerGeneral .infoFooter {
+  padding-top: 8rem;
+  border-left: 1px solid;
+  margin: 1rem 0;
+}
+.footerGeneral .infoFooter img {
+  background: transparent;
+  padding-right: 1rem;
+}
+.footerGeneral .infoFooter p {
+  text-decoration: none;
+}
+.footerGeneral .redes {
+  display: flex;
+  justify-content: space-around;
+  padding: 6rem 1rem;
+  border-left: 1px solid;
+  margin: 1rem 0;
+  background: transparent;
+}
+.footerGeneral .logos {
+  background: transparent;
+  padding-left: 1rem;
+}
+.footerGeneral .nav-link {
   color: #14ffc0;
-  text-decoration: overline;
 }
-
-.nav-link {
-  color: #14ffc0;
-}
-.nav-link:hover {
+.footerGeneral .nav-link:hover {
   color: #15133C;
 }
 
+/* footer 768 px*/
+@media (max-width: 768px) {
+  .footerGeneral {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "barraFooter" "redes" "infoFooter";
+  }
+  .footerGeneral .barraFooter {
+    grid-area: barraFooter;
+    border-right: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  .footerGeneral .redes {
+    grid-area: redes;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    border-left: none;
+  }
+  .footerGeneral .infoFooter {
+    grid-area: infoFooter;
+    border-left: none;
+    padding-top: 2rem;
+  }
+}
+/* footer 480px*/
+@media (max-width: 480px) {
+  .footerGeneral {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "barraFooter" "redes" "infoFooter";
+  }
+  .footerGeneral .barraFooter {
+    grid-area: barraFooter;
+    border-right: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  .footerGeneral .redes {
+    grid-area: redes;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    border-left: none;
+  }
+  .footerGeneral .infoFooter {
+    grid-area: infoFooter;
+    padding-top: 0;
+    border-left: none;
+  }
+}
 /* inicio de main preinipal*/
 .texto {
   padding: 10px;
@@ -285,6 +336,7 @@ img {
   }
   .logos {
     padding-bottom: 1rem;
+    width: 5rem;
   }
 }
 /*  quienes */
@@ -328,7 +380,7 @@ body .quienesGeneral {
 }
 
 .textoVeterinario {
-  text-align: center;
+  text-align: inherit;
 }
 .textoVeterinario b {
   color: aquamarine;
@@ -409,6 +461,8 @@ h4 {
   margin: 3rem 6rem 3rem 6rem;
 }
 .adopciones .caja {
+  color: #F1EEE9;
+  font-family: "Work Sans", sans-serif;
   display: flex;
   flex-direction: column;
   margin-bottom: 5rem;
@@ -417,15 +471,18 @@ h4 {
   border-radius: 5%;
 }
 .adopciones .caja img {
+  cursor: pointer;
   border-radius: 5%;
   width: 100%;
   height: none;
 }
+.adopciones .caja img:hover {
+  transform: scale(1.1);
+  transition: all 1s;
+}
 .adopciones .descripcion, .adopciones .offcanvas p, .offcanvas .adopciones p {
   text-align: inherit;
   padding: 0.5rem;
-  color: #F1EEE9;
-  font-family: "Work Sans", sans-serif;
 }
 
 .boton {
@@ -442,7 +499,7 @@ h4 {
   background: black;
   color: aquamarine;
 }
-/*adopta 1024*/
+/*adopta 1024px*/
 @media (max-width: 1024px) {
   .adopciones {
     display: grid;

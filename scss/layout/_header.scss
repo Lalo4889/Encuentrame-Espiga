@@ -1,7 +1,9 @@
-
+.navbar{
+  background:linear-gradient(597deg, #084298, transparent);
+}
 .navbar-light .navbar-nav .nav-link {
     color:$colorTitulos;
-    padding: 1rem; 
+    padding: 1rem;
   }
   h1{
     position: absolute;

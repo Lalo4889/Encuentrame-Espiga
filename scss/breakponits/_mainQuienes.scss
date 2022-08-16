@@ -41,7 +41,7 @@ body{
         & b{
             color: aquamarine;
         }
-      text-align: center;
+      text-align: inherit;
       @extend .textoQuienes
     }
 

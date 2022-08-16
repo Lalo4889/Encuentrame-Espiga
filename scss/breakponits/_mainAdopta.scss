@@ -7,6 +7,8 @@
     margin: 3rem 6rem 3rem 6rem;
     
         .caja{
+            color: $color-texto;
+            font-family: $fueneteTexto;
             display: flex;
             flex-direction: column;
             margin-bottom: 5rem;
@@ -14,18 +16,22 @@
             border-radius: 5%;
      
                & img{
+                 cursor: pointer;
                  border-radius: 5%;
                  @include tamaño(100%, none);
-       }
-    }
+               }
+               img:hover{
+                transform: scale(1.1);
+                transition: all 1s;
+               }
+            }
+   
    .descripcion{
     text-align: inherit;
     padding: .5rem;
-    color: $color-texto;
-    font-family: $fueneteTexto;
     }    
-}   
-
+  }
+  
 .boton{
     padding-top: 2rem;
     @include ubicacion;
@@ -42,9 +48,7 @@
     @extend .descripcion
   } 
 }
-
-  
-  /*adopta 1024*/
+/*adopta 1024px*/
 
   @media (max-width:1024px) {
     .adopciones{
