@@ -528,7 +528,7 @@ h4 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 10%;
-    gap: 1rem;
+    gap: 2rem;
     margin: 1rem;
   }
 }
