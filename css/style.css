@@ -80,6 +80,32 @@ h1 {
   color: #15133C;
 }
 
+/* header 480px*/
+@media (max-width: 480px) {
+  .collapse {
+    display: flex;
+    justify-content: end;
+  }
+  .collapse ul {
+    color: #14ffc0;
+  }
+  .collapse ul li a {
+    text-decoration: none;
+    color: #14ffc0;
+    font-weight: 300;
+    font-size: large;
+    transition: background-color 0.5s;
+  }
+  .collapse ul li a:hover {
+    background-color: #14ffc0;
+    border-radius: 5px;
+    color: #15133C;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: #14ffc0;
+    padding: 0.5rem;
+  }
+}
 header {
   border-bottom: 0.5px solid whitesmoke;
 }
@@ -114,7 +140,7 @@ h2, h4 {
   text-decoration: none;
   padding: 0.5rem;
   color: #14ffc0;
-  font-weight: 600;
+  font-weight: 300;
   font-size: large;
   transition: background-color 0.5s;
 }
@@ -134,6 +160,7 @@ h2, h4 {
 }
 .footerGeneral .infoFooter p {
   text-decoration: none;
+  font-weight: 300;
 }
 .footerGeneral .redes {
   display: flex;
@@ -265,8 +292,6 @@ img {
   }
   .navbar-light .navbar-nav .nav-link {
     color: #14ffc0;
-    border: 1px solid;
-    border-radius: 5px;
     padding-right: 1rem;
     margin-top: 0.5rem;
   }
@@ -315,14 +340,14 @@ img {
   }
   .collapse {
     display: flex;
-    justify-content: center;
-    text-align: center;
+    justify-content: space-between;
+    text-align: start;
   }
   h1 {
     position: relative;
     top: 50%;
     padding-bottom: 1rem;
-    font-size: 30px;
+    font-size: 19px;
   }
   h2, h4 {
     font-size: 30px;

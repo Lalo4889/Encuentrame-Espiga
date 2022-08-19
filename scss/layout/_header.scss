@@ -74,3 +74,35 @@
         }
     }
 }
+
+/* header 480px*/
+
+@media (max-width:480px) {
+  
+  .collapse{
+    display: flex;
+    justify-content: end;
+    ul{
+    color:$colorTitulos;
+       li{
+           a{
+            text-decoration: none;
+          
+            color:$colorTitulos;
+            font-weight: 300;
+            font-size: large;
+            transition: background-color .5s;
+            &:hover{
+                background-color:$colorTitulos;
+                border-radius: 5px;
+                color:$colorPrincpal;  
+                }
+           }
+        }
+    }
+}
+.navbar-light .navbar-nav .nav-link {
+  color:$colorTitulos;
+  padding: .5rem;
+}
+}

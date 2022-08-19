@@ -74,8 +74,6 @@
     
     .navbar-light .navbar-nav .nav-link {
       color:$colorTitulos;
-      border: 1px solid;
-      border-radius: 5px;
       padding-right: 1rem;
       margin-top: .5rem;
     }
@@ -141,15 +139,16 @@
     }
     
     .collapse{
-      @include ubicacion;
-      text-align:center;
+      display: flex;
+      justify-content: space-between;
+      text-align:start;
     }
     
     h1{
       position: relative;
       top: 50%;
       padding-bottom: 1rem;
-      font-size: 30px;
+      font-size: 19px;
     }
     
     h2{

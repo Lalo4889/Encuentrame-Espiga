@@ -17,7 +17,7 @@ padding-top: 2rem;
             text-decoration: none;
             padding:.5rem;
             color:$colorTitulos;
-            font-weight: 600;
+            font-weight: 300;
             font-size: large;
             transition: background-color .5s;
             &:hover{
@@ -41,6 +41,7 @@ padding-top: 2rem;
 
        p{
         text-decoration: none;
+        font-weight: 300;
        }
   }
     
